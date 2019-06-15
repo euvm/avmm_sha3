@@ -11,7 +11,7 @@ clean:
 run: avmm_sha3.vvp avmm_sha3.vpi
 	vvp -M. -mavmm_sha3 avmm_sha3.vvp +UVM_TESTNAME=avmm_sha3.random_test # +UVM_OBJECTION_TRACE # +UVM_VERBOSITY=DEBUG
 
-avmm_sha3.vvp: avmm_sha3.v hdl/*.v
+avmm_sha3.vvp: avmm_sha3.v ../rtl/*.v
 	iverilog -o $@ $^
 
 avmm_sha3.vpi: avmm_sha3.d tiny_sha3/libsha3.a
