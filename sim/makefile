@@ -19,7 +19,7 @@ avmm_sha3.vvp: ../testbench/avmm_sha3.v ../src/rtl/*.v
 
 avmm_sha3.vpi: ../testbench/avmm_sha3.d libsha3.a
 	ldc2 $(DFLAGS) -shared -of$@ -L-luvm-ldc-shared -L-lesdl-ldc-shared \
-		-L-lphobos2-ldc-shared -L-ldl $^
+		-L-lphobos2-ldc-shared -L-lz3 -L-ldl $^
 
 
 
